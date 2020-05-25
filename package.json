@@ -1,0 +1,25 @@
+{
+  "name": "github-actions-hands-on",
+  "description": "GitHub Actions ハンズオン",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint .",
+    "start": "node index.js",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/miyajan/github-actions-hands-on.git"
+  },
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "@cybozu/eslint-config": "^10.0.3",
+    "eslint": "^7.1.0",
+    "eslint-plugin-jest": "^23.13.1",
+    "jest": "^26.0.1",
+    "prettier": "^2.0.5"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
