@@ -74,5 +74,6 @@ $ git push -u origin setup-ci
 - 成果物
 - 通知
 - バッジ
+- その他いろいろ
 
 より詳しく知りたい人は、[公式ドキュメント](https://help.github.com/en/actions)を参考に、自分の開発しているソフトウェアに CI/CD を設定してみましょう！
