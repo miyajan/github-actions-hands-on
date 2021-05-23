@@ -31,10 +31,10 @@ jobs:
     name: Lint and Test
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2.1.1
-      - uses: actions/setup-node@v1.4.2
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
         with:
-          node-version: 12.x
+          node-version: 14.x
       - run: npm ci
       - run: npm run lint
   build:
@@ -42,7 +42,7 @@ jobs:
     needs: [lint_and_test]
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2.1.1
+      - uses: actions/checkout@v2
       - run: docker build .
 ```
 
@@ -50,8 +50,8 @@ jobs:
 
 - `on: push`: リポジトリにコミットが push されるたびにこのワークフローを実行する
 - `runs-on: ubuntu-latest`: GitHub Actions が提供する Ubuntu の最新環境上でビルドを行う
-- `uses: actions/checkout@v2.1.1`: リポジトリをビルド環境上にチェックアウトする
-- `uses: actions/setup-node@v1.4.2`: ビルド環境の Node.js を `node-version` で指定したバージョンでセットアップする
+- `uses: actions/checkout@v2`: リポジトリをビルド環境上にチェックアウトする
+- `uses: actions/setup-node@v2`: ビルド環境の Node.js を `node-version` で指定したバージョンでセットアップする
 - `run`: 指定したコマンドを実行
 - `needs: [lint_and_test]`: `lint_and_test` ジョブが成功したら実行
 
