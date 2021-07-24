@@ -1,8 +1,19 @@
 module.exports = {
-  root: true,
-  extends: "@cybozu/eslint-config/presets/node-prettier",
-  plugins: ["jest"],
-  env: {
-    "jest/globals": true,
-  },
+    "env": {
+        "browser": true,
+        "commonjs": true,
+        "es2021": true
+    },
+    "extends": [
+        "eslint:recommended",
+        "plugin:vue/essential"
+    ],
+    "parserOptions": {
+        "ecmaVersion": 12
+    },
+    "plugins": [
+        "vue"
+    ],
+    "rules": {
+    }
 };
