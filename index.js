@@ -4,7 +4,7 @@ const fizzbuzz = require("./lib/fizzbuzz");
 const app = express();
 
 app.get("/", (req, res) => {
-  res.send("Hello, World!\n");
+  res.send("Hello, beautiful World!\n");
 });
 
 app.get("/fizzbuzz", (req, res) => {
